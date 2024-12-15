@@ -1,0 +1,190 @@
+/* TOC Container Styling */
+#toc-container {
+    position: sticky;
+    top: 110px;
+    height: calc(100vh - 110px);
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+    background-color: #f8f9fa;
+    transition: width 0.3s ease, opacity 0.3s ease; /* Transition for width and opacity */
+    width: 240px; /* Default width of TOC */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;  /* Hide scrollbar for Internet Explorer */
+    overflow: hidden; /* Hide the scrollbar */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* For collapsed TOC */
+#toc-container.collapsed {
+    width: 0; /* Collapse width to 0 */
+    opacity: 0; /* Fade out content */
+    padding: 0;
+    border-right: none;
+    overflow: hidden; /* Hide the scrollbar when collapsed */
+}
+
+/* Viewer Container Styling */
+#viewer-container {
+    padding: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 110px);
+    transition: width 0.3s ease, margin-left 0.3s ease, margin-right 0.3s ease; /* Smooth transitions for width and margins */
+    width: calc(100% - 240px); /* Default: space for TOC */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;  /* Hide scrollbar for Internet Explorer */
+    overflow: scroll; /* Allow scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+
+
+/* Adjust arrow icon styling in the container */
+.nav-link .fa {
+    transition: transform 0.3s ease;
+    font-size: 0.9rem; /* Adjust icon size if necessary */
+  }
+  
+  .nav-link[aria-expanded="true"] .fa {
+    transform: rotate(90deg); /* Rotate arrow when expanded */
+  }
+  
+  .nav-link .fa {
+    margin-right: 0.5rem; /* Ensure spacing between the arrow and text */
+  }
+
+
+
+/* For collapsed TOC */
+#toc-container.collapsed + #viewer-container {
+    width: 100%; /* Full width when TOC is collapsed */
+    margin-left: 0; /* Remove left margin */
+}
+
+/* For collapsed Comments */
+#comments-container.collapsed + #viewer-container {
+    width: 100%; /* Full width when Comments is collapsed */
+    margin-right: 0; /* Remove right margin */
+}
+
+/* When both TOC and Comments are collapsed */
+#toc-container.collapsed + #comments-container.collapsed + #viewer-container {
+    width: 100%; /* Full width when both TOC and Comments are collapsed */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+/* Comments Section Styling */
+#comments-container {
+    padding: 20px;
+    border-left: 1px solid #ccc;
+    overflow-y: auto;
+    height: calc(100vh - 110px);
+    background-color: #f0f0f0;
+    transition: width 0.3s ease, opacity 0.3s ease; /* Transition for width and opacity */
+    width: 500px; /* Default width of Comments */
+    display: block; /* Ensure the comments section is visible by default */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;  /* Hide scrollbar for Internet Explorer */
+    overflow: hidden; /* Hide the scrollbar */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* For collapsed Comments */
+#comments-container.collapsed {
+    width: 0; /* Collapse width to 0 */
+    opacity: 0; /* Fade out content */
+    padding: 0;
+    border-left: none;
+}
+
+/* Prevent scrollbars from appearing while keeping scroll functionality */
+#toc-container::-webkit-scrollbar,
+#viewer-container::-webkit-scrollbar,
+#comments-container::-webkit-scrollbar {
+    display: none; /* Hides scrollbar */
+}
+
+
+
+/*------------------------------------Comments cs-----------------------------------*/
+/* Comments Section Styling */
+#comments-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+   
+    height: 80vh; /* Set a specific height */
+    overflow-y: auto; /* Make it scrollable */
+}
+
+/* Scrollbar styling for the comments container */
+#comments-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+#comments-container::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 10px;
+}
+
+
+
+  
+
+
+@media (max-width: 991.98px) {
+    .comments-container {
+      display: none !important; /* Ensure the container is hidden on smaller screens */
+    }
+
+    #toc-container {
+        display: none !important; /* Ensure the TOC is hidden on smaller screens */
+      }
+  }
+
+
+
+  
+
+  /* Full screen viewer container for mobile */
+@media (max-width: 992px) {
+    #viewer-container {
+      width: 100vw;   /* Full width of the viewport */
+      height: 100vh;  /* Full height of the viewport */
+      overflow-y: auto; /* Allow scrolling if content overflows */
+    }
+  
+    /* Adjust the TOC and Comments sections for smaller screens */
+    #toc-container, .comments-container {
+      display: none; /* Hide on mobile devices */
+    }
+    
+    .offcanvas {
+      width: 100%; /* Make the offcanvas take up full width on mobile */
+    }
+  }
+
+  
+  /* Navbar adjustments for mobile */
+@media (max-width: 992px) {
+    .navbar-nav {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    /* Ensure offcanvas buttons are well placed */
+    .navbar i {
+      font-size: 1.5rem;
+    }
+  }
+  
+  
+  
+
+
+  
+ 
+  

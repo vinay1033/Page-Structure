@@ -1,0 +1,170 @@
+[
+    {
+      "id": 1,
+      "thread_id": 1,
+      "user_name": "John Doe",
+      "profile_pic": "https://via.placeholder.com/40",
+      "comment": "This is the first comment in the thread.",
+      "date_time": "2024-12-13 10:00 AM",
+      "replies": [
+        {
+          "id": 2,
+          "user_name": "Jane Doe",
+          "profile_pic": "https://via.placeholder.com/40",
+          "comment": "This is a reply to the first comment.",
+          "date_time": "2024-12-13 10:30 AM"
+        },
+        {
+          "id": 3,
+          "user_name": "Alice Smith",
+          "profile_pic": "https://via.placeholder.com/40",
+          "comment": "Another reply to the first comment.",
+          "date_time": "2024-12-13 10:45 AM"
+        },
+        {
+          "id": 4,
+          "user_name": "Michael Johnson",
+          "profile_pic": "https://via.placeholder.com/40",
+          "comment": "Here's yet another reply to the first comment.",
+          "date_time": "2024-12-13 11:00 AM"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "thread_id": 2,
+      "user_name": "Bob Brown",
+      "profile_pic": "https://via.placeholder.com/40",
+      "comment": "This is the first comment in a different thread.",
+      "date_time": "2024-12-13 11:00 AM",
+      "replies": []
+    },
+    {
+      "id": 6,
+      "thread_id": 3,
+      "user_name": "Charlie Davis",
+      "profile_pic": "https://via.placeholder.com/40",
+      "comment": "This is another comment in a separate thread.",
+      "date_time": "2024-12-13 12:00 PM",
+      "replies": [
+        {
+          "id": 7,
+          "user_name": "Dave Wilson",
+          "profile_pic": "https://via.placeholder.com/40",
+          "comment": "Reply to the third comment.",
+          "date_time": "2024-12-13 12:30 PM"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "thread_id": 1,
+      "user_name": "Eve White",
+      "profile_pic": "https://via.placeholder.com/40",
+      "comment": "A third comment in the first thread.",
+      "date_time": "2024-12-13 01:00 PM",
+      "replies": []
+    },
+    {
+      "id": 9,
+      "thread_id": 4,
+      "user_name": "Zachary Brown",
+      "profile_pic": "https://via.placeholder.com/40",
+      "comment": "This is a comment on thread 4.",
+      "date_time": "2024-12-13 01:30 PM",
+      "replies": [
+        {
+          "id": 10,
+          "user_name": "Olivia Green",
+          "profile_pic": "https://via.placeholder.com/40",
+          "comment": "Reply to thread 4's comment.",
+          "date_time": "2024-12-13 02:00 PM"
+        },
+        {
+          "id": 11,
+          "user_name": "Sophia Taylor",
+          "profile_pic": "https://via.placeholder.com/40",
+          "comment": "Another reply to thread 4.",
+          "date_time": "2024-12-13 02:30 PM"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "thread_id": 5,
+      "user_name": "Liam Harris",
+      "profile_pic": "https://via.placeholder.com/40",
+      "comment": "This is a comment on thread 5.",
+      "date_time": "2024-12-13 03:00 PM",
+      "replies": [
+        {
+          "id": 13,
+          "user_name": "Emma Clark",
+          "profile_pic": "https://via.placeholder.com/40",
+          "comment": "Reply to thread 5's comment.",
+          "date_time": "2024-12-13 03:30 PM"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "thread_id": 6,
+      "user_name": "James Lewis",
+      "profile_pic": "https://via.placeholder.com/40",
+      "comment": "This is a comment in thread 6.",
+      "date_time": "2024-12-13 04:00 PM",
+      "replies": [
+        {
+          "id": 15,
+          "user_name": "Amelia Walker",
+          "profile_pic": "https://via.placeholder.com/40",
+          "comment": "Reply to thread 6's comment.",
+          "date_time": "2024-12-13 04:30 PM"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "thread_id": 7,
+      "user_name": "Lucas Scott",
+      "profile_pic": "https://via.placeholder.com/40",
+      "comment": "This is a comment in thread 7.",
+      "date_time": "2024-12-13 05:00 PM",
+      "replies": [
+        {
+          "id": 17,
+          "user_name": "Mia King",
+          "profile_pic": "https://via.placeholder.com/40",
+          "comment": "Reply to thread 7's comment.",
+          "date_time": "2024-12-13 05:30 PM"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "thread_id": 8,
+      "user_name": "Noah Young",
+      "profile_pic": "https://via.placeholder.com/40",
+      "comment": "This is a comment in thread 8.",
+      "date_time": "2024-12-13 06:00 PM",
+      "replies": []
+    },
+    {
+      "id": 19,
+      "thread_id": 9,
+      "user_name": "Mason Martinez",
+      "profile_pic": "https://via.placeholder.com/40",
+      "comment": "This is a comment in thread 9.",
+      "date_time": "2024-12-13 06:30 PM",
+      "replies": [
+        {
+          "id": 20,
+          "user_name": "Isabella Moore",
+          "profile_pic": "https://via.placeholder.com/40",
+          "comment": "Reply to thread 9's comment.",
+          "date_time": "2024-12-13 07:00 PM"
+        }
+      ]
+    }
+  ]
+  

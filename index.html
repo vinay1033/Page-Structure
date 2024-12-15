@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4 shadow-sm d-none d-lg-block">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+          <!-- TOC Toggle Button -->
+          <i
+            id="collapse-toc-btn"
+            class="fa-sharp fa-regular fa-angles-left"
+            
+          
+          ></i>
+          <h5 class="d-none d-lg-block">Table of contents</h5>
+      
+          <!-- ACoMS Lg (Visible only on large screens) -->
+          <a class="navbar-brand mx-auto d-none d-lg-block" href="#">ACoMS Lg</a>
+    
+      
+          <div class="d-flex ms-auto align-items-center">
+            <h5 class="d-none d-lg-block">Comments</h5>
+            <!-- Comments Toggle Button -->
+            <i
+              id="collapse-comments-btn"
+              class="fa-sharp fa-regular fa-angles-right"
+             
+            ></i>
+          </div>
+        </div>
+      </nav>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4 shadow-sm d-lg-none">
+        <div
+          class="container-fluid d-flex justify-content-between align-items-center"
+        >
+          <!-- TOC Toggle Button -->
+          <i
+            id="collapse-toc-btn"
+            class="fa-sharp fa-regular fa-angles-left"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#toc-offcanvas"
+          ></i>
+          <h5 class="d-none d-lg-block">Table of contents</h5>
+    
+          <a class="navbar-brand mx-auto" href="#">ACoMS sm</a>
+    
+          <div class="d-flex ms-auto align-items-center">
+            <h5 class="d-none d-lg-block">Comments</h5>
+            <!-- Comments Toggle Button -->
+            <i
+              id="collapse-comments-btn"
+              class="fa-sharp fa-regular fa-angles-right"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#comments-offcanvas"
+            ></i>
+          </div>
+        </div>
+      </nav>
+    
+      
+   
+
+    <div class="container-fluid d-flex h-100">
+     <!-- TOC Section -->
+   <div class="col-12 col-md-2 collapse show d-none d-lg-block" id="toc-container">
+    <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4">
+      <nav class="nav nav-pills flex-column">
+        <div class="nav-item">
+          <a
+            class="nav-link d-flex align-items-center"
+            data-bs-toggle="collapse"
+            href="#item-1-collapse"
+            role="button"
+            aria-expanded="false"
+            aria-controls="item-1-collapse"
+          >
+            <i class="me-2 fa fa-angle-right"></i>
+            <span>Item 1</span>
+          </a>
+          <div class="collapse" id="item-1-collapse">
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-4 my-1" href="#item-1-1">Item 1-1</a>
+              <a class="nav-link ms-4 my-1" href="#item-1-2">Item 1-2</a>
+            </nav>
+          </div>
+        </div>
+        <a class="nav-link" href="#item-2">Item 2</a>
+        <div class="nav-item">
+          <a
+            class="nav-link d-flex align-items-center"
+            data-bs-toggle="collapse"
+            href="#item-3-collapse"
+            role="button"
+            aria-expanded="false"
+            aria-controls="item-3-collapse"
+          >
+            <i class="me-2 fa fa-angle-right"></i>
+            <span>Item 3</span>
+          </a>
+          <div class="collapse" id="item-3-collapse">
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-4 my-1" href="#item-3-1">Item 3-1</a>
+              <a class="nav-link ms-4 my-1" href="#item-3-2">Item 3-2</a>
+            </nav>
+          </div>
+        </div>
+        <a class="nav-link" href="#item-4">Item 4</a>
+      </nav>
+    </nav>
+  </div>
+  
+      
+
+
+       
+      <!-- Viewer Section -->
+      <div class="viewer-container" id="viewer-container">
+        <!-- Content for each item -->
+        <div id="item-1">
+          <h4>Item 1</h4>
+          <p>
+            Content for Item 1: Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Nullam ac enim id felis elementum condimentum. Cras
+            in lorem ac mi cursus hendrerit et non velit.
+          </p>
+        </div>
+        <div id="item-1-1">
+          <h5>Item 1-1</h5>
+          <p>
+            Content for Item 1-1: Phasellus ac sapien eget justo dictum
+            elementum. Ut at eros nec augue suscipit cursus non sit amet neque.
+            Nam fringilla convallis nulla, ut posuere eros cursus sit amet.
+          </p>
+          <p>
+            Content for Item 1-1: Phasellus ac sapien eget justo dictum
+            elementum. Ut at eros nec augue suscipit cursus non sit amet neque.
+            Nam fringilla convallis nulla, ut posuere eros cursus sit amet.
+          </p>
+          <p>
+            Content for Item 1-1: Phasellus ac sapien eget justo dictum
+            elementum. Ut at eros nec augue suscipit cursus non sit amet neque.
+            Nam fringilla convallis nulla, ut posuere eros cursus sit amet.
+          </p>
+        </div>
+        <div id="item-1-2">
+          <h5>Item 1-2</h5>
+          <p>
+            Content for Item 1-2: Curabitur aliquet, magna eget laoreet
+            hendrerit, ligula felis consequat velit, in fermentum turpis sapien
+            non libero. Integer vel gravida nunc. Suspendisse scelerisque
+            tincidunt sem, nec accumsan nulla.
+          </p>
+          <p>
+            Content for Item 1-2: Curabitur aliquet, magna eget laoreet
+            hendrerit, ligula felis consequat velit, in fermentum turpis sapien
+            non libero. Integer vel gravida nunc. Suspendisse scelerisque
+            tincidunt sem, nec accumsan nulla.
+          </p>
+          <p>
+            Content for Item 1-2: Curabitur aliquet, magna eget laoreet
+            hendrerit, ligula felis consequat velit, in fermentum turpis sapien
+            non libero. Integer vel gravida nunc. Suspendisse scelerisque
+            tincidunt sem, nec accumsan nulla.
+          </p>
+        </div>
+        <div id="item-2">
+          <h4>Item 2</h4>
+          <p>
+            Content for Item 2: Sed non felis et elit vehicula laoreet. Ut
+            feugiat neque vel quam facilisis, non fermentum velit luctus.
+            Quisque nec pharetra nulla. Integer nec lacinia est, non auctor
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+            neque omnis est facilis magni quisquam ipsam nihil esse, expedita
+            optio autem placeat doloribus accusamus cupiditate nesciunt unde
+            dolore ducimus. Quae ducimus error quis iure accusantium molestias
+            totam nam labore quasi, molestiae impedit eum laudantium placeat
+            atque vitae fugiat tenetur veritatis.
+          </p>
+        </div>
+        <div id="item-3">
+          <h4>Item 3</h4>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum,
+            facere, vitae necessitatibus, commodi nihil aperiam et eius ut
+            temporibus laborum quasi? Vel vitae voluptas obcaecati, ea ducimus
+            hic atque et! Nesciunt corrupti omnis quam maiores quasi quidem,
+            voluptate, nisi quo quaerat accusantium ex est iure voluptatem
+            suscipit ducimus nobis possimus!Content for Item 3: Nulla vehicula
+            mollis felis, ac feugiat purus accumsan sit amet. Etiam ut purus ut
+            lorem aliquam tincidunt. Ut consequat neque vel nisl consectetur, id
+            pretium metus sodales.
+          </p>
+        </div>
+        <div id="item-3-1">
+          <h5>Item 3-1</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+            animi ipsam possimus nam quisquam nostrum error hic cum odit
+            tenetur. Quis corrupti a laboriosam, ad voluptate ipsa. Laborum
+            illum, enim facere, nihil deserunt pariatur nisi, libero hic
+            doloribus illo accusamus quia aperiam quis soluta officiis itaque
+            natus laudantium! Eius, est? Dolores eos ratione doloribus
+            praesentium aspernatur impedit placeat deserunt porro!Content for
+            Item 3-1: Vivamus scelerisque orci et sem cursus, sed viverra augue
+            vehicula. Integer fringilla orci purus, sit amet auctor velit
+            venenatis non. Proin vel lectus vitae risus tempor cursus non non
+            magna.
+          </p>
+        </div>
+        <div id="item-3-2">
+          <h5>Item 3-2</h5>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam
+            saepe eaque, sunt ab dolorem nesciunt quas dicta aliquid eum
+            obcaecati, totam facilis corporis sed consectetur autem quis cumque
+            esse, architecto nostrum! Nisi voluptatum praesentium qui, tempora
+            officiis alias, veritatis at odit nemo nobis dolor nesciunt
+            laudantium! Animi veniam explicabo qui?Content for Item 3-2: In
+            euismod tincidunt lectus, eu blandit libero sodales a. Etiam in
+            lacus sit amet dolor tristique congue. Duis ac ante ut eros gravida
+            tempus et eu eros.
+          </p>
+        </div>
+        <div id="item-4">
+          <h4>Item 4</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+            earum cupiditate rerum repudiandae consequuntur aliquid placeat,
+            illo soluta et, magnam quod fugit, tenetur ut enim. Maiores sunt
+            alias assumenda laboriosam harum excepturi, debitis voluptatibus
+            nostrum similique non doloremque veritatis corrupti quisquam rerum
+            minima, asperiores error. Officiis enim quidem at dolorum dicta
+            culpa, quae nam corporis nemo ea iusto assumenda non!Content for
+            Item 4: Morbi vestibulum dolor vitae velit consequat, at tempus
+            risus maximus. Fusce vulputate ante nec orci lobortis, id feugiat
+            sapien pellentesque. Maecenas volutpat ultricies metus sit amet
+            vestibulum.
+          </p>
+        </div>
+        <div id="item-4-1">
+          <h5>Item 4-1</h5>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            molestias ullam accusamus maiores, autem esse enim! Quae porro earum
+            ut eos officiis, labore iure voluptatum quisquam. Recusandae
+            accusamus autem aliquid itaque error architecto officia doloribus
+            ducimus molestias voluptatibus maxime a qui pariatur porro facere
+            nobis laudantium dolor doloremque, iusto dicta? Content for Item
+            4-1: Vivamus cursus mi eget metus placerat condimentum. Integer
+            dapibus felis felis, vitae tincidunt nulla tempor eget. Donec
+            tristique vehicula orci, in egestas libero facilisis vitae.
+          </p>
+        </div>
+        <div id="item-4-2">
+          <h5>Item 4-2</h5>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Praesentium tenetur molestias labore fugiat deserunt quo inventore
+            iste, quos dolores culpa, non quod quisquam facere. Doloribus
+            facilis consequuntur dolor repellat, aliquid maiores animi
+            perspiciatis harum ut nemo beatae amet voluptatem maxime laboriosam
+            fugit nostrum magni molestias! Tempore ipsum repellat nam
+            saepe.Content for Item 4-2: Aliquam erat volutpat. Ut viverra, ipsum
+            et consectetur facilisis, dui augue gravida orci, vel tincidunt sem
+            ex vitae dui. Sed sed ante ut arcu viverra scelerisque sit amet vel
+            magna.
+          </p>
+        </div>
+      </div>
+
+     <!-- Comments Section -->
+<div class="comments-container d-none d-lg-block" id="comments-container">
+    <h4>Comments</h4>
+    <div id="comments-list"></div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+   <!-- Comments Offcanvas -->
+   <div
+   class="offcanvas offcanvas-end d-lg-none"
+   id="comments-offcanvas"
+   tabindex="-1"
+   aria-labelledby="comments-offcanvas-label"
+ >
+   <div class="offcanvas-header">
+     <h5 id="comments-offcanvas-label">Comments</h5>
+     <button
+       type="button"
+       class="btn-close"
+       data-bs-dismiss="offcanvas"
+       aria-label="Close"
+     ></button>
+   </div>
+   <div class="offcanvas-body">
+    <div class="comments-container" id="comments-container">
+        <h4>Comments</h4>
+        <div id="comments-list"></div>
+      </div>
+   </div>
+ </div>
+
+
+
+ 
+    <!-- TOC Offcanvas -->
+    <div
+      class="offcanvas offcanvas-start d-lg-none"
+      id="toc-offcanvas"
+      tabindex="-1"
+      aria-labelledby="toc-offcanvas-label"
+    >
+      <div class="offcanvas-header">
+        <h5 id="toc-offcanvas-label">Table of Contents</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4">
+          <!-- Your TOC content here -->
+
+    <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4">
+      <nav class="nav nav-pills flex-column">
+        <div class="nav-item">
+          <a
+            class="nav-link d-flex align-items-center"
+            data-bs-toggle="collapse"
+            href="#item-1-collapse"
+            role="button"
+            aria-expanded="false"
+            aria-controls="item-1-collapse"
+          >
+            <i class="me-2 fa fa-angle-right"></i>
+            <span>Item 1</span>
+          </a>
+          <div class="collapse" id="item-1-collapse">
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-4 my-1" href="#item-1-1">Item 1-1</a>
+              <a class="nav-link ms-4 my-1" href="#item-1-2">Item 1-2</a>
+            </nav>
+          </div>
+        </div>
+        <a class="nav-link" href="#item-2">Item 2</a>
+        <div class="nav-item">
+          <a
+            class="nav-link d-flex align-items-center"
+            data-bs-toggle="collapse"
+            href="#item-3-collapse"
+            role="button"
+            aria-expanded="false"
+            aria-controls="item-3-collapse"
+          >
+            <i class="me-2 fa fa-angle-right"></i>
+            <span>Item 3</span>
+          </a>
+          <div class="collapse" id="item-3-collapse">
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-4 my-1" href="#item-3-1">Item 3-1</a>
+              <a class="nav-link ms-4 my-1" href="#item-3-2">Item 3-2</a>
+            </nav>
+          </div>
+        </div>
+        <a class="nav-link" href="#item-4">Item 4</a>
+      </nav>
+    </nav>
+  </div>
+        </nav>
+      </div>
+    </div>
+    
+    <script src="main.js"></script>
+    <script src="comments.js"></script>
+  </body>
+</html>
