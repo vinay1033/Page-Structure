@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Fetch the comments JSON data
     fetch('comments.json')
       .then(response => response.json())
@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
     // Function to display comments
     function displayComments(commentsData) {
-      const commentsList = document.getElementById("comments-list");
+      // Get all elements with the "comments-list" class (handles both main and offcanvas)
+      const commentsLists = document.querySelectorAll(".comments-list");
   
       // Group comments by thread_id
       const threads = {};
@@ -29,7 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
           threadDiv.appendChild(commentCard);
         });
   
-        commentsList.appendChild(threadDiv);
+        // Append thread to all comments containers
+        commentsLists.forEach(commentsList => {
+          commentsList.appendChild(threadDiv.cloneNode(true));
+        });
       }
     }
   
@@ -43,17 +47,20 @@ document.addEventListener("DOMContentLoaded", function() {
   
       // User profile and name
       const userDiv = document.createElement("div");
-      userDiv.className = "d-flex";
+      userDiv.className = "d-flex align-items-center mb-2";
+  
       const userProfileLink = document.createElement("a");
-      userProfileLink.href = "https://example.com/user-profile";  // Link to the user profile
+      userProfileLink.href = "https://example.com/user-profile"; // Link to the user profile
       userProfileLink.target = "_blank";
+  
       const userProfileImage = document.createElement("img");
       userProfileImage.src = comment.profile_pic;
       userProfileImage.alt = "User Profile";
-      userProfileImage.className = "rounded-circle";
+      userProfileImage.className = "rounded-circle me-2";
       userProfileLink.appendChild(userProfileImage);
+  
       const userName = document.createElement("h5");
-      userName.className = "card-title";
+      userName.className = "card-title mb-0";
       userName.textContent = comment.user_name;
   
       userDiv.appendChild(userProfileLink);
@@ -65,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
       commentText.textContent = comment.comment;
   
       const commentDate = document.createElement("p");
-      commentDate.className = "text-muted";
+      commentDate.className = "text-muted small";
       commentDate.textContent = `Posted on: ${comment.date_time}`;
   
       // Append user, comment, and date to card body
@@ -76,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // Display replies (if any)
       if (comment.replies && comment.replies.length > 0) {
         const repliesDiv = document.createElement("div");
-        repliesDiv.className = "replies-list";
+        repliesDiv.className = "replies-list mt-3 ms-3";
         comment.replies.forEach(reply => {
           const replyCard = createCommentCard(reply);
           repliesDiv.appendChild(replyCard);
@@ -88,3 +95,4 @@ document.addEventListener("DOMContentLoaded", function() {
       return commentCard;
     }
   });
+  
